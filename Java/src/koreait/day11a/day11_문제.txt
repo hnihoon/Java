@@ -1,0 +1,59 @@
+﻿Access Modifier
+[접근한정자] public, default, protected, private 
+Q1.  동일한 패키지의 클래스 상속에서 제외되는 필드 또는 메소드의  접근한정자는?
+		private
+	
+Q2.  다른 패키지의 클래스를 부모클래스로 하여 자식클래스를 정의할 것이다. 
+     이 때 필드 또는 메소드를 상속하기 위해 사용할 수 있는 접근한정자는?
+	public , protected
+
+Q3. com.koreait.abc 패키지의 클래스 ClassA를 com.koreait.abc2 패키지의 클래스 ClassB가 상속받을 것이다. 이 때 클래스 ClassB에 필요한 import 문을 쓰시오.
+	import com.koreait.abc
+
+Q4. 다음과 같이 클래스가 정의되어 있다. Student 클래스에서 오류가 발생한다. 
+    오류를 수정할 수 있는 2가지 방법은?
+  public class People {
+            int id;
+	/*
+		People() {
+		
+		}
+	*/	    
+            People(int id) {
+                this.id = id;
+            }
+  }
+   public class Student extends People {  
+        
+        /*
+        	Student(int id) {
+        	super(id);
+        	}
+        */  
+
+   }
+
+Q5.  public class Student extends People {  } 로 정의된 클래스를 
+      아래와 같이 사용하는 경우 오류가 발생하는 구문은?  ④
+      	
+
+       ① Student   kim = new Student();  
+       ② People  lee = new Student();	 
+       ③ People choi = new People();	 
+       ④ Student kang = new People();
+
+Q6. 아래와 같이 정의된 클래스를 사용하는 구문 중 오류가 발생하는 구문은?  ②
+
+   public class People {
+           int id;
+   }
+
+   public class Student extends People {
+	  
+          String hno;   	
+   }
+
+       ① Student   kim = new Student();    kim.hno = "20201101";  
+       ② People  lee = new Student();     lee.hno = "20201101";   
+       ③ People choi = new People();     choi.id= 20201101;
+       ④ Student   kang = new Student();    kang.id = 20201101;
