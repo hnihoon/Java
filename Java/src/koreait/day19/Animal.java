@@ -13,7 +13,7 @@ public abstract class Animal { //abstract 클래스는 abstract 메소드를 갖
 	}
 	
 	public Animal(String name) {
-		this();		//기본 생성자 호출
+		this();	 //기본 생성자 호출
 		this.name = name;
 	}
 	public Animal(String name, String color) {
