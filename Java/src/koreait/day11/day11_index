@@ -1,0 +1,14 @@
+day11 순서
+
+
+1.클래스 상속관계에서 생성자 : ClassA.java , ClassB.java ,ClassC.java  - 부모클래스
+					ClassAA.java , ClassBB.java , ClassCC.java - 자식클래스
+
+2.상속관계 연습 : Shape.java , Triangle.java , Square.java
+
+3.상속관계 접근자 : protected
+  koreait.day11a 패키지
+
+* 연습문제
+1.Animal.java
+2.Puppy.java
