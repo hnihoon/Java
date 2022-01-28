@@ -1,0 +1,17 @@
+day01 = println , printf사용법 , 기본자료형
+day02 = 실수자료형 , 자료형의 크기보는법
+day03 = 논리연산자 , if문 , 캐스팅
+day04 = for문, switch문 , 아스키코드
+day05 = while문, 배운걸로 문제풀이
+day06 = 상수, 메소드
+day07 = 배열, 랜덤클래스
+day08 = 로또문제 , String클래스 활용하기
+day09 = 숫자놀이, DecimalFormat
+day10 = do ~ while , 생성자
+day11 = 다형성, 오버라이드 , 연습문제
+day12 = ArrayList , 로또문제
+day13 = HashMap, TreeMap(MyDictionary class)
+day14 = 배열에 여러개의 객체 생성하기
+day15 = FIle, 예외처리(Try cahch문)
+day16 = 시간관련, DecimalFormat , 인터페이스
+day17 = 인터페이스 다중상속
