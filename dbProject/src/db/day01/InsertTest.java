@@ -38,7 +38,7 @@ public class InsertTest {	//오라클 idev 스키마 custom# 테이블에 고객
 		
 		OracleConnectUtil.close(conn);
 
-		
+		System.out.println(500*0);
 		
 	}
 

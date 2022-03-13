@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import db.day01.OracleConnectUtil;
-import db.vo.Custom;
+import db.vo.Custom1;
 
 public class CustomDao {
 
@@ -23,7 +23,7 @@ public class CustomDao {
 	}
 	
 	//intsert 쿼리
-	public void insert(Custom vo) {
+	public void insert(Custom1 vo) {
 		Connection conn = OracleConnectUtil.connect();
 		String sql = "INSERT INTO TBL_CUSTOM# " + 
 				"(CUSTOM_ID, NAME, EMAIL, AGE, REG_DATE)" + 
@@ -54,7 +54,7 @@ public class CustomDao {
 	}
 	//update 쿼리
 //		public void update(String custom_id, String email) {  //방법1)
-		public void update(Custom vo) {  //방법2)
+		public void update(Custom1 vo) {  //방법2)
 		Connection conn = OracleConnectUtil.connect();
 		String sql = "UPDATE TBL_custom# SET email =? WHERE custom_id=?";
 		PreparedStatement pstmt = null;
@@ -97,19 +97,19 @@ public class CustomDao {
 		OracleConnectUtil.close(conn);
 	}
 	//select 쿼리 (기본키 컬럼으로 조회하고 결과 반환)
-	public static Custom selectOne(String custom_id) {
+	public static Custom1 selectOne(String custom_id) {
 		Connection conn = OracleConnectUtil.connect();
 		PreparedStatement pstmt = null;
 		String sql = "select * from tbl_custom where custom_id = ?";
 		//기본키컬럼 조회결과는 0또는 1개 행입니다.
 		ResultSet rs = null;
-		Custom vo = null;
+		Custom1 vo = null;
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, custom_id);
 			rs = pstmt.executeQuery(); 	
 			if(rs.next()) {		//조회결과 1개 행 있으면
-				vo = new Custom();
+				vo = new Custom1();
 				vo.setCustom_id(rs.getString(1));
 				vo.setName(rs.getString(2));
 				vo.setEmail(rs.getString(3));
@@ -126,19 +126,19 @@ public class CustomDao {
 	}
 	
 	//select 쿼리(조건없음)
-	public List<Custom> selectAll() {
+	public List<Custom1> selectAll() {
 		Connection conn = OracleConnectUtil.connect();
 		String sql = "select * from tbl_custom#";
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		List<Custom> customs = new ArrayList<>();
+		List<Custom1> customs = new ArrayList<>();
 
 		try {
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery(); 	
 			
 			while(rs.next()) {
-				customs.add(new Custom(rs.getString(1),
+				customs.add(new Custom1(rs.getString(1),
 						rs.getString(2), 
 						rs.getString(3), 
 						rs.getInt(4), 

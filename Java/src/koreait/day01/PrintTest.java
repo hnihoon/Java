@@ -1,5 +1,8 @@
 package koreait.day01;	//koreait.day1은 패키지 이름
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PrintTest {	//PrintTest는 클래스 이름
 //설명:주석(comment)
 
@@ -11,6 +14,7 @@ public class PrintTest {	//PrintTest는 클래스 이름
 		System.out.println("----------------------");
 		System.out.println("End!");
 		System.out.println();
+		int i = 1;
 		
 		short b_val;
 		int i_val = 87;
@@ -24,10 +28,13 @@ public class PrintTest {	//PrintTest는 클래스 이름
 		d_val = i_val;
 //		i_val = d_val;
 		
+		String aa = "";
+		String ss = "SS";
 		
+		System.out.println(aa.equals(""));
 	}
-
 }
+
 //저장 : Ctrl + S , 실행 : Ctrl + f11, 한줄 복사 : Ctrl+Alt+아래방향키
 /* 자바는 클래스를 이용하는 프로그래밍 방식이다.
 예) 구스 다운을 사고 싶다 -> K2 매장, 치킨을 먹고싶다 -> bhc

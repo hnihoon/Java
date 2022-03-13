@@ -1,0 +1,38 @@
+1. CustomDao에 메소드 1개 추가했습니다. 
+	public int selectNum() {
+		Connection conn = CafeConnectUtil.connect();
+		String sql = "SELECT MAX(CUSTOM_NUM) FROM TBL_CUSTOM";
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		int max=0;
+		try {
+			pstmt=conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				max=rs.getInt(1);
+			}
+			pstmt.close();
+			
+		} catch (SQLException e) {
+			System.out.println("SQL 실행 오류"+e.getMessage());
+		}
+		CafeConnectUtil.close(conn);
+		return max;
+	}
+
+2. Order에 추가했습니다.(VO) 커스텀 생성자
+	public Order(int custom_num, String prod_name, int quantity) {
+		super();
+		this.custom_num = custom_num;
+		this.prod_name = prod_name;
+		this.quantity = quantity;
+	}
+
+3. test 클래스 store 변수값 "매 장","포 장"이 varchar2(6)보다 커서 varchar2(10)으로 변경했습니다.
+CREATE TABLE TBL_CUSTOM(
+	custom_num number(3) PRIMARY KEY,
+	p_or_s varchar2(10)		
+	
+);
+ALTER TABLE TBL_CUSTOM MODIFY P_OR_S VARCHAR2(10); 
+

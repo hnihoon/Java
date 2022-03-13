@@ -30,7 +30,7 @@ public class GuiMain extends JFrame implements ActionListener {
 	private void init() {
 		//컴포넌트의 크기와 위치 정하기
 		la1 = new JLabel("English");
-		la1.setBounds(50,50,100,30); 	//x좌표,y좌표,너비,높이
+		la1.setBounds(50,50,500,30); 	//x좌표,y좌표,너비,높이
 		
 		tf1 = new JTextField();
 		tf1.setBounds(150, 50, 150, 30);

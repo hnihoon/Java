@@ -1,11 +1,11 @@
 package db.day03;
 
-import db.vo.Custom;
+import db.vo.Custom1;
 
 public class Day3Main {
 
 	public static void main(String[] args) {
-		Custom momo = CustomDao.selectOne("twice");
+		Custom1 momo = CustomDao.selectOne("twice");
 		System.out.println(momo);
 		
 		SingletonObj obj = SingletonObj.getInstance();
